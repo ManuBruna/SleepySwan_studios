@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleepy Swan Studios</title>
+    <style>
+     /* Default Light Mode */
+body {
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Styling for header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Button styles */
+#theme-toggle {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+}
+
+#theme-toggle:hover {
+    background-color: #555;
+}
+
+/* Additional styling for the homepage content */
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.team-members {
+    flex: 1;
+    text-align: left;
+}
+
+.logo-container {
+    position: relative;
+    left: -250px; /* Adjust this value to move it more to the left */
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+}
+
+}/* Default Light Mode */
+body {
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #002F6C; /* Navy blue */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        
+        nav {
+            background: #001C3D; /* Darker Navy blue */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background: #002F6C; /* Navy blue */
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <h1>🦢 Sleepy Swan Studios 🦢</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="About us.html">About Us</a>
+    <a href="game-developments.html">Game Developments</a>
+    <button id="theme-toggle">Switch to Dark Mode</button>
+</nav>
+
+<main>
+        <section id="home">
+            <h2>🦢 Welcome to Sleepy Swan Studios 🦢</h2>
+    
+            <!-- Team Section with Flexbox -->
+            <div class="team-container">
+                <div class="team-members">
+                    <p><strong>Design:</strong> Isabela</p>
+                    <p><strong>Programmer:</strong> Chandler</p>
+                    <p><strong>Sound Tech:</strong> Tan</p>
+                    <p><strong>QA and WebDev:</strong> Manuel</p>
+                    <p><strong>Date:</strong> 2024-12-15</p>
+                </div>
+    
+                <!-- Logo Section -->
+                <div class="logo-container">
+                    <img src="img/sleepyswanLogo.jpg" alt="Sleepy Swan Logo" class="logo">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Get the button and body
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+    
+        // Check if dark mode is already enabled from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = 'Switch to Light Mode';
+        }
+    
+        // Toggle between light and dark mode when the button is clicked
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+    
+            // Save the current theme in localStorage
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = 'Switch to Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = 'Switch to Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+       
+        <!-- Logo on the homepage -->
+        
+        
+        <p>Welcome to Sleepy Swan Studios! Here is where you can find key information about our company and the projects we are working on. </p> We're a small team of dreamers, creators, 
+            and gamers who believe in the power of storytelling and immersive gameplay. With a shared love for both indie games and new technologies, 
+            we’ve embarked on our first project: a game that blends creativity, adventure, and emotion.</p>
+
+            At SleepySwan Studios, we take pride in crafting unique experiences that captivate players and transport them to new worlds. 
+            Join us on our journey as we shape the future of indie gaming, one game at a time."Stay tuned for exciting updates!</p>
+    </section>
+</main>
+
+<p>We are currently working on <strong>One Minute to Close</strong>, and will be releasing more information soon. Stay tuned!</p>
+
+<p><strong>Follow us on social media for updates:
+    <p><a href="https://store.steampowered.com/app/2953320/One_Minute_To_Close/?curator_clanid=45009190" target="_blank">One Minute To Close on Steam</a></p>
+
+    <!-- Optional: Uncomment if you want to include GitHub link -->
+    <p><a href="https://github.com/SleepySwanStudios" target="_blank">GitHub</a></p>
+    
+    <!-- Optional: Uncomment if you want to include Twitter link -->
+    <p><a href="https://twitter.com/SleepySwanStudios" target="_blank">Twitter</a></p>
+    
+    <!-- Optional: Uncomment if you want to include LinkedIn link -->
+    <p><a href="https://linkedin.com/company/sleepy-swan-studios" target="_blank">LinkedIn</a></p>
+    
+    <p><a href="https://bluesky.com/SleepySwanStudios" target="_blank">Bluesky</a></p>
+    
+    <p><a href="https://instagram.com/SleepySwanStudios" target="_blank">Instagram</a></p>
+    
+    <!-- Optional: Uncomment if you want to include Itch.io link -->
+    <p><a href="https://itch.io" target="_blank">Itch.io</a></p>
+
+    <p><a href="mailto:info@example.org">Email Us</a></p>
+
+
+
+</strong></p>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Sleepy Swan Studios</p>
+</footer>
+
+</body>
+</html>
