@@ -1,233 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleepy Swan Studios</title>
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS Styling -->
     <style>
-     /* Default Light Mode */
-body {
-    background-color: #fff;
-    color: #000;
-    transition: all 0.3s ease;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Styling for header */
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Button styles light mode dark mode */
-#theme-toggle {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #444;
-    color: white;
-    border-radius: 5px;
-}
-
-#theme-toggle:hover {
-    background-color: #555;
-}
-
-/* Additional styling for the homepage content */
-.team-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.team-members {
-    flex: 1;
-    text-align: left;
-}
-
-.logo-container {
-    position: relative;
-    left: -210px; /* Adjust this value to move it more to the left */
-}
-
-.logo {
-    max-width: 250px;
-    height: auto;
-}
-
-}/* Default Light Mode */
-body {
-    background-color: #fff;
-    color: #000;
-    transition: all 0.3s ease;
-}
-
-/* Dark Mode */
-body.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-
+        /* Default Light Mode */
         body {
+            background-color: #fff;
+            color: #000;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+            line-height: 1.5;
+            transition: all 0.3s ease;
+            /* Remove body margins, margins will be applied to main-content */
         }
-        header {
-            background: #002F6C; /* THIS IS THE TOP AND BOTTOM BARS style edits , header and footer Navy blue */
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #333;
             color: #fff;
-            padding: 1rem 0;
+        }
+
+        header, footer {
+            background: #002F6C;
+            color: white;
             text-align: center;
+            padding: 1rem 0;
         }
-        header h1 {
-            font-size: 2rem;
+
+         /* Main Content Wrapper */
+         .main-content {
+            margin-left: 4cm;  /* Add left margin */
+            margin-right: 4cm; /* Add right margin */
+            padding: 1rem; /* Optional padding inside content */
         }
-        
+
         nav {
-            background: #001C3D; /* Darker Navy blue */
+            background: #001C3D;
             color: #fff;
             display: flex;
-            justify-content: center;
-            padding: 0.5rem 0;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 2rem;
-        }
-        footer {
-            background: #002F6C; /* Navy blue */
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
+            justify-content: center; /* Center navigation items */
+            align-items: center; /* Vertically align items */
+            padding: 0rem rem; /* Add padding to the left and right for more space */
+            margin: 0 auto; /* Center the nav bar itself */
+            max-width: 1700px; /* Limit the width to ensure it doesn't stretch too much */
             width: 100%;
         }
+
+        nav .nav-links {
+            display: flex; /* Align links horizontally */
+            gap: 18px; /* Add spacing between links */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.4rem rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Dark Mode Toggle Button */
+        #theme-toggle {
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            padding: 10px;
+            border: none;
+            background-color: #444;
+            color: white;
+            border-radius: 50%;
+            font-size: 01rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            background-color: #555;
+        }
+
+        #theme-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .dark-mode #theme-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Team and Logo Section */
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .team-members {
+            flex: 1;
+            text-align: center;
+        }
+
         .logo {
             max-width: 200px;
-            margin-bottom: 20px;
+            height: auto;
+            align-items: left;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
         }
     </style>
-    
 </head>
+
 <body>
+    <!-- Header Section -->
+    <header>
+        <h1> 🦢 Sleepy Swan Studios 🦢 </h1>
+    </header>
 
-<header>
-    <h1>🦢 Sleepy Swan Studios 🦢</h1>
-</header>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="About us.html">About Us</a>
+            <a href="game-developments.html">Game Developments</a>
+        </div>
+        <!-- Light Mode Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle Theme">
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="About us.html">About Us</a>
-    <a href="game-developments.html">Game Developments</a>
-    <button id="theme-toggle">Switch to Dark Mode</button>
-</nav>
+    <!-- Main Content with Margins -->
+    <div class="main-content">
+        <main>
+            <section id="home">
+                <h2>🦢 Welcome to Sleepy Swan Studios 🦢</h2>
 
-<main>
-        <section id="home">
-            <h2>🦢 Welcome to Sleepy Swan Studios 🦢</h2>
+                <!-- Team Section -->
+                <div class="team-container">
+                    <div class="team-members">
+                        <p><strong>Design:</strong> Isabela</p>
+                        <p><strong>Programmer:</strong> Chandler</p>
+                        <p><strong>Sound Tech:</strong> Thanh</p>
+                        <p><strong>QA and WebDev:</strong> Manuel</p>
+                        <p><strong>Date:</strong> 2024-12-15</p>
+                    </div>
 
-            <!-- Team Section with Flexbox -->
-            <div class="team-container">
-                <div class="team-members">
-                    <p><strong>Design:</strong> Isabela</p>
-                    <p><strong>Programmer:</strong> Chandler</p>
-                    <p><strong>Sound Tech:</strong> Tan</p>
-                    <p><strong>QA and WebDev:</strong> Manuel</p>
-                    <p><strong>Date:</strong> 2024-12-15</p>
+                    <!-- Logo -->
+                    <div>
+                        <img src="sleepyswanLogo.jpg" alt="Sleepy Swan Logo" class="logo">
+                    </div>
                 </div>
-    
-                <!-- Logo Section -->
-                <div class="logo-container">
-                    <img src="sleepyswanLogo.jpg" alt="Sleepy Swan Logo" class="logo">
+
+                <!-- Introduction Section -->
+                <p>Welcome to Sleepy Swan Studios! We're a small team of dreamers, creators, and gamers who believe in the power of storytelling and immersive gameplay. Join us on our journey to craft unique gaming experiences!</p>
+            </section>
+
+            <!-- Social Media Links -->
+            <section>
+                <p><strong>Follow us on social media for updates:</strong></p>
+                <div class="social-links">
+                    <a href="https://store.steampowered.com/app/2953320" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
+                    <a href="https://instagram.com/SleepySwanStudios" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://github.com/SleepySwanStudios" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://twitter.com/SleepySwanStudios" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    <a href="https://linkedin.com/company/sleepy-swan-studios" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="mailto:info@example.org"><i class="fa-solid fa-envelope"></i> Email Us</a>
                 </div>
-            </div>
-        </section>
-    </main>
-    
+            </section>
+        </main>
+    </div> <!-- End of main-content -->
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Sleepy Swan Studios</p>
+    </footer>
+
+    <!-- Dark Mode Script -->
     <script>
-        // Get the button and body
+        // Get the button, icon, and body
         const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
-    
-        // Check if dark mode is already enabled from localStorage
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            themeToggle.textContent = 'Switch to Light Mode';
-        }
-    
-        // Toggle between light and dark mode when the button is clicked
+
+        // Toggle between light and dark mode
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-    
-            // Save the current theme in localStorage
+
+            // Update the button icon and text dynamically
             if (body.classList.contains('dark-mode')) {
-                themeToggle.textContent = 'Switch to Light Mode';
-                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon'); // Switch from moon
+                themeIcon.classList.add('fa-sun');     // Add sun icon
+                themeToggle.setAttribute('aria-label', 'Switch to Light Mode');
             } else {
-                themeToggle.textContent = 'Switch to Dark Mode';
-                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');  // Switch from sun
+                themeIcon.classList.add('fa-moon');    // Add moon icon
+                themeToggle.setAttribute('aria-label', 'Switch to Dark Mode');
             }
         });
     </script>
-       
-        <!-- Logo on the homepage -->
-        
-        
-        <p>Welcome to Sleepy Swan Studios! Here is where you can find key information about our company and the projects we are working on. </p> We're a small team of dreamers, creators, 
-            and gamers who believe in the power of storytelling and immersive gameplay. With a shared love for both indie games and new technologies, 
-            we’ve embarked on our first project: a game that blends creativity, adventure, and emotion.</p>
-
-            At SleepySwan Studios, we take pride in crafting unique experiences that captivate players and transport them to new worlds. 
-            Join us on our journey as we shape the future of indie gaming, one game at a time."Stay tuned for exciting updates!</p>
-    </section>
-</main>
-
-<p>We are currently working on <strong>One Minute to Close</strong>, and will be releasing more information soon. Stay tuned!</p>
-
-<p><strong>Follow us on social media for updates:
-    <p><a href="https://store.steampowered.com/app/2953320/One_Minute_To_Close/?curator_clanid=45009190" target="_blank">One Minute To Close on Steam</a></p>
-
-    <!-- Optional: Uncomment if you want to include GitHub link -->
-    <p><a href="https://github.com/SleepySwanStudios" target="_blank">GitHub</a></p>
-    
-    <!-- Optional: Uncomment if you want to include Twitter link -->
-    <p><a href="https://twitter.com/SleepySwanStudios" target="_blank">Twitter</a></p>
-    
-    <!-- Optional: Uncomment if you want to include LinkedIn link -->
-    <p><a href="https://linkedin.com/company/sleepy-swan-studios" target="_blank">LinkedIn</a></p>
-    
-    <p><a href="https://bluesky.com/SleepySwanStudios" target="_blank">Bluesky</a></p>
-    
-    <p><a href="https://instagram.com/SleepySwanStudios" target="_blank">Instagram</a></p>
-    
-    <!-- Optional: Uncomment if you want to include Itch.io link -->
-    <p><a href="https://itch.io" target="_blank">Itch.io</a></p>
-
-    <p><a href="mailto:info@example.org">Email Us</a></p>
-
-
-
-</strong></p>
-</section>
-</main>
-
-<footer>
-    <p>&copy; 2024 Sleepy Swan Studios</p>
-</footer>
-
 </body>
 </html>
